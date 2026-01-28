@@ -1,74 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  /* Educational Palette - Calming Blue & Growth Green */
-  --primary: 217 91% 60%;      /* #3b82f6 Blue-500 */
-  --primary-foreground: 0 0% 100%;
-  
-  --secondary: 158 64% 52%;    /* #10b981 Emerald-500 */
-  --secondary-foreground: 0 0% 100%;
-  
-  --accent: 38 92% 50%;        /* #f59e0b Amber-500 (for highlights) */
-  --accent-foreground: 0 0% 100%;
-  
-  --background: 210 40% 98%;   /* Soft Blue-Grey tint */
-  --foreground: 222 47% 11%;   /* Dark Blue-Grey text */
-  
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 217 91% 60%;
-  
-  --radius: 1rem;
-  
-  /* Arabic Typography */
-  --font-tajawal: 'Tajawal', sans-serif;
+/* إعدادات عامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", Arial, sans-serif;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  
-  html {
-    direction: rtl; /* Enforce RTL for Arabic */
-  }
-  
-  body {
-    @apply bg-background text-foreground antialiased font-tajawal;
-    font-family: var(--font-tajawal);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
-  }
+/* خلفية الصفحة */
+body {
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.8;
+  direction: rtl;
+  padding: 20px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
-  }
-  
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-l from-primary to-secondary;
-  }
+/* عنوان الموقع */
+h1 {
+  text-align: center;
+  color: #0b5ed7;
+  margin-bottom: 15px;
+}
+
+/* عنوان فرعي */
+h2 {
+  color: #198754;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* الفقرات */
+p {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* قائمة التجارب */
+ul {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* صندوق تجربة */
+.experiment {
+  background-color: #ffffff;
+  border-right: 5px solid #0b5ed7;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* تذييل الصفحة */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #555;
+  font-size: 14px;
 }
